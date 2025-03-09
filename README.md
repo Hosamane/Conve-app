@@ -1,6 +1,6 @@
-# TalkNest Chat Application
+# Convo Chat Application
 
-TalkNest is a full-stack chat application built with a React frontend and an Express.js backend. It offers real-time messaging, user authentication, profile management, and a responsive design tailored for seamless user experience.
+Convo is a full-stack chat application built with a React frontend and an Express.js backend. It offers real-time messaging, user authentication, profile management, and a responsive design tailored for seamless user experience.
 
 ## Features
 
