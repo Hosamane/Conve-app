@@ -17,11 +17,12 @@ dotenv.config();
 //Define the App
 const app = express();
 const port =  process.env.Port || 3000;
-const databaseURL = process.env.database_URL;
-
+const databaseURL = "mongodb+srv://user:user@cluster0.ea1ducj.mongodb.net/synchronouschat";
+//process.env.database_URL
 //Middleware to Communicate between different
 app.use(cors({
-    origin : [process.env.ORIGIN || 'https://convo-app-frontend.vercel.app/' ],
+    origin : ['https://convo-app-frontend.vercel.app/' ],
+    // process.env.ORIGIN
     methods: ["GET", "POST", "PUT", "DELETE", "PATCH"],
     credentials : true,
 }));
