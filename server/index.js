@@ -21,7 +21,7 @@ const databaseURL = process.env.database_URL;
 
 //Middleware to Communicate between different
 app.use(cors({
-    origin : [process.env.ORIGIN],
+    origin : [process.env.ORIGIN || 'https://convo-app-frontend.vercel.app/' ],
     methods: ["GET", "POST", "PUT", "DELETE", "PATCH"],
     credentials : true,
 }));
