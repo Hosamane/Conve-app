@@ -7,6 +7,6 @@ import { verifyToken } from '../middlewares/AuthMiddleware.js'
 const MessagesRoute = Router();
 // const uploads = multer({ dest: 'uploads/files' });
 MessagesRoute.post("/get-messages", verifyToken , getMessages);
-MessagesRoute.post("/upload-file", verifyToken, uploads.single('file'), uploadFile);
+// MessagesRoute.post("/upload-file", verifyToken, uploads.single('file'), uploadFile);
 
 export default MessagesRoute;
