@@ -1,7 +1,7 @@
 import { Router } from 'express';
 import { getMessages } from '../models/MessageController.js';
 import { verifyToken } from '../middlewares/AuthMiddleware.js'
-import multer from 'multer';
+// import multer from 'multer';
 // import { uploadFile } from '../models/MessageController.js';
 
 const MessagesRoute = Router();
