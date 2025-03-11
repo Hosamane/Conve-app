@@ -17,7 +17,7 @@ dotenv.config();
 //Define the App
 const app = express();
 const port =  process.env.Port || 3000;
-const databaseURL = process.env.database_URL;
+const databaseURL = process.env.DATABASE_URL;
 //process.env.database_URL
 //Middleware to Communicate between different
 app.use(cors({
