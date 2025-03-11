@@ -1,6 +1,6 @@
 # Conve-Chat-App 🚀
 
-Welcome to the **Conve-Chat-App**! 👋 This project is a full-stack responsive chat application built for real-time communication using modern web technologies. Whether you want to chat in groups or one-on-one, share files, or just have a fun conversation with emojis, this app has you covered.
+Welcome to the **Conve-Chat-App**! 👋 This project is a full-stack responsive chat application built for real-time communication using modern web technologies. Whether you want to chat in groups or one-on-one or just have a fun conversation with emojis, this app has you covered.
 
 ## 🛠️ Tech Stack
 
@@ -9,7 +9,6 @@ Welcome to the **Conve-Chat-App**! 👋 This project is a full-stack responsive 
 - **ShadCN** 🧩: A collection of UI components for a seamless design experience.
 - **Tailwind CSS** 🎨: Utility-first CSS framework for custom designs.
 - **JWT Tokens** 🔑: Secure authentication mechanism.
-- **Multer** 📁📷: Middleware for handling file uploads.
 - **Axios** 🌐: Promise-based HTTP client for the browser and Node.js.
 - **Zustand** 🧠: Small, fast, and scalable state management solution.
 
@@ -44,10 +43,6 @@ Powered by **Socket.io**, the app supports instant messaging, ensuring that user
 ## 🔑 Secure Authentication
 
 User security is a top priority. The app uses **JWT tokens** for secure authentication, ensuring that your data is safe.
-
-## 📁 File Upload and Download
-
-Need to share files? The app makes it easy to upload and download files, with **Multer** handling all the heavy lifting.
 
 ## 😄 Emoji Support
 
