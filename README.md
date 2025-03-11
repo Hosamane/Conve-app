@@ -53,13 +53,13 @@ Need to share files? The app makes it easy to upload and download files, with **
 
 Make your conversations more expressive with full emoji support.
 
-## 🚀 Getting Started
 
 ## Project Structure
 The project is structured into two main parts:
 - **`client/`**: Contains the ReactJS frontend.
 - **`server/`**: Contains the NodeJS & Express.js backend.
 
+## 🚀 Getting Started
 ### Prerequisites
 
 Before you begin, ensure you have the following installed:
