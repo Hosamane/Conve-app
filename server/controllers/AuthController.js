@@ -107,92 +107,92 @@ export const getUserInfo = async (request, response , next ) => {
 
 }
 
-// Update User Profile function in Profile.jsx
-export const updateProfile = async (request, response , next ) => {
-    try{
-        //console.log(request.userId);
-        const {userId} = request;
-        const {firstName, lastName, color} = request.body;
-        if(!firstName || !lastName || color === undefined){
-            return response.status(400).send("First Name, Last Name and Color are required!");
-        }
+// // Update User Profile function in Profile.jsx
+// export const updateProfile = async (request, response , next ) => {
+//     try{
+//         //console.log(request.userId);
+//         const {userId} = request;
+//         const {firstName, lastName, color} = request.body;
+//         if(!firstName || !lastName || color === undefined){
+//             return response.status(400).send("First Name, Last Name and Color are required!");
+//         }
 
-        const userData = await User.findByIdAndUpdate(
-            userId,
-            {
-            firstName, 
-            lastName, 
-            color, 
-            profileSetup:true
-            },
-            {new:true, runValidators:true});
-        if(!userData){
-            return response.status(404).send("User Does Not Exist!");
-        }
-        return response.status(200).json({
-                // Send the user data
-                id:userData.id,
-                email:userData.email,
-                profileSetup:userData.profileSetup,
-                firstName:userData.firstName,
-                lastName: userData.lastName,
-                image:userData.image,
-                color:userData.color,
+//         const userData = await User.findByIdAndUpdate(
+//             userId,
+//             {
+//             firstName, 
+//             lastName, 
+//             color, 
+//             profileSetup:true
+//             },
+//             {new:true, runValidators:true});
+//         if(!userData){
+//             return response.status(404).send("User Does Not Exist!");
+//         }
+//         return response.status(200).json({
+//                 // Send the user data
+//                 id:userData.id,
+//                 email:userData.email,
+//                 profileSetup:userData.profileSetup,
+//                 firstName:userData.firstName,
+//                 lastName: userData.lastName,
+//                 image:userData.image,
+//                 color:userData.color,
 
-        });
-    } catch(error){
-        console.log({error});
-        return response.status(500).send("Internal Server Error!");
-    }
+//         });
+//     } catch(error){
+//         console.log({error});
+//         return response.status(500).send("Internal Server Error!");
+//     }
 
-}
+// }
 
 
-export const addProfileImage = async (request, response , next ) => {
-    try{
-        if(!request.file){
-            return response.status(400).send("Image is required!");
-        }
-        const date = Date.now()
-        let fileName = "uploads/profiles/" + date + encodeURIComponent(request.file.originalname);
-        renameSync(request.file.path, fileName);
+// export const addProfileImage = async (request, response , next ) => {
+//     try{
+//         if(!request.file){
+//             return response.status(400).send("Image is required!");
+//         }
+//         const date = Date.now()
+//         let fileName = "uploads/profiles/" + date + encodeURIComponent(request.file.originalname);
+//         renameSync(request.file.path, fileName);
 
-        const updatedUser = await User.findByIdAndUpdate(request.userId, {image:fileName}, {new:true , runValidators:true});
-        return response.status(200).json({
-            image : updatedUser.image,
+//         const updatedUser = await User.findByIdAndUpdate(request.userId, {image:fileName}, {new:true , runValidators:true});
+//         return response.status(200).json({
+//             image : updatedUser.image,
 
-        });
-    } catch(error){
-        console.log({error});
-        return response.status(500).send("Internal Server Error!");
-    }
+//         });
+//     } catch(error){
+//         console.log({error});
+//         return response.status(500).send("Internal Server Error!");
+//     }
 
-}
+// }
 
-export const removeProfileImage = async (request, response , next ) => {
-    try{
-        //console.log(request.userId);
-        const {userId} = request;
-        const user = await User.findById(userId);
-        if(!user){
-            return response.status(404).send("User Does Not Exist!");
-        }
-        if(!user.image){
-            return response.status(400).send("No Image to Remove!");
-        }
-        if(user.image){
-            if(existsSync(user.image)){
-                unlinkSync(user.image);}
-        }
-        user.image=null;
-        await user.save();
-        return response.status(200).send("Image Removed Successfully!");
-    } catch(error){
-        console.log({error});
-        return response.status(500).send("Internal Server Error!");
-    }
+// export const removeProfileImage = async (request, response , next ) => {
+//     try{
+//         //console.log(request.userId);
+//         const {userId} = request;
+//         const user = await User.findById(userId);
+//         if(!user){
+//             return response.status(404).send("User Does Not Exist!");
+//         }
+//         if(!user.image){
+//             return response.status(400).send("No Image to Remove!");
+//         }
+//         if(user.image){
+//             if(existsSync(user.image)){
+//                 unlinkSync(user.image);}
+//         }
+//         user.image=null;
+//         await user.save();
+//         return response.status(200).send("Image Removed Successfully!");
+//     } catch(error){
+//         console.log({error});
+//         return response.status(500).send("Internal Server Error!");
+//     }
 
-}
+// }
 
 export const logOut = async (request, response, next) => {
     try {
