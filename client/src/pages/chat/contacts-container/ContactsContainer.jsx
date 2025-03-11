@@ -89,7 +89,7 @@ const Logo = () => {
   ></path>
 </svg>
 
-      <span className="text-3xl font-semibold ">Convo</span>
+      <span className="text-3xl font-semibold ">Conve</span>
     </div>
   );
 };
