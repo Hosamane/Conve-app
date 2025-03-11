@@ -16,7 +16,7 @@ dotenv.config();
 
 //Define the App
 const app = express();
-const port =  process.env.Port || 3000;
+const port =  process.env.PORT;
 const databaseURL = process.env.DATABASE_URL;
 //process.env.database_URL
 //Middleware to Communicate between different
@@ -44,7 +44,7 @@ app.use("/api/channel", channelRoutes)
 
 // Routes
 const server = app.listen(port, ()=>{
-    console.log(`Server is running at http://localhost:${port}`);
+    console.log(`Server is running at http://localhost`);
 })
 
 // Socket Connection for Real Time Communication
