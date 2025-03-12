@@ -6,7 +6,7 @@ import { useRef , useEffect , useState } from "react";
 import { MdFolderZip } from "react-icons/md";
 import { IoMdArrowDown } from "react-icons/io";
 import { IoCloseSharp } from "react-icons/io5";
-import { AvatarFallback, Avatar } from "@/components/ui/avatar";
+import { AvatarFallback, Avatar, AvatarImage } from "@/components/ui/avatar";
 import { getColor } from "@/lib/utils";
 
 const MessageContainer = () => {
