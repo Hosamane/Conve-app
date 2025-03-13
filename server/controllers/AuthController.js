@@ -71,7 +71,7 @@ export const login = async (request, response , next ) => {
                 profileSetup:user.profileSetup,
                 firstName:user.firstName,
                 lastName: user.lastName,
-                image:user.image,
+                image:user. image,
                 color:user.color,
             },
         });
